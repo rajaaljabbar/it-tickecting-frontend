@@ -13,7 +13,30 @@
         <input type="email" id="email" placeholder="Email" required />
         <input type="password" id="password" placeholder="Password" required />
         <button type="submit">Login</button>
+        <p id="registerLink">
+          <a href="#" onclick="showRegisterPopup()">Register</a>
+        </p>
       </form>
+      <div id="registerPopup" class="popup">
+        <div class="popup-content">
+          <h3>Register</h3>
+          <button
+            class="register-btn email-btn"
+            onclick="window.open('mailto:it.support@contoh.com?subject=Registrasi%20Account%20Ticketing&body=Halo%20Team%20IT,%20Mohon%20daftarkan%20account%20saya%20agar%20bisa%20membuat%20ticketing', '_blank')"
+          >
+            Email ke IT Support
+          </button>
+          <button
+            class="register-btn wa-btn"
+            onclick="window.open('https://wa.me/628111334866?text=Halo%20Team%20IT,%20Mohon%20daftarkan%20account%20saya%20agar%20bisa%20membuat%20ticketing', '_blank')"
+          >
+            Chat via WA
+          </button>
+          <button class="close-btn" onclick="closeRegisterPopup()">
+            X Close
+          </button>
+        </div>
+      </div>
     </div>
 
     <script src="js/script.js"></script>

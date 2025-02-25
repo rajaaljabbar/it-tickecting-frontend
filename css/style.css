@@ -3,7 +3,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #a0e3ff, #76c5e8);
+  background: linear-gradient(to bottom, #c0825b, #ce926e);
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -207,6 +207,150 @@ table#tiketTable tbody tr:hover {
 #adminTiketTable td button:hover {
   background-color: #0056b3;
 }
+
+/* Link Register */
+#registerLink {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#registerLink a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#registerLink a:hover {
+  text-decoration: underline;
+}
+
+/* Popup Style */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.popup-content {
+  background: #fff;
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.popup-content h3 {
+  margin-bottom: 15px;
+}
+
+.popup-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.popup-content ul li {
+  margin: 10px 0;
+}
+
+.popup-content ul li a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.popup-content button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-content button:hover {
+  background: #0056b3;
+}
+
+/* Styling khusus untuk tombol X Close */
+.popup-content .close-btn {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 10px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: underline;
+  border-radius: 0 !important;
+}
+
+.popup-content .close-btn:hover {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+/* Style tombol Register */
+.register-btn {
+  display: block;
+  width: 80%;
+  padding: 10px;
+  margin: 10px auto;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+}
+
+/* Email Button */
+.email-btn {
+  background-color: #007bff;
+}
+
+.email-btn:hover {
+  background-color: #0056b3;
+}
+
+/* WhatsApp Button */
+.wa-btn {
+  background-color: #25d366;
+}
+
+.wa-btn:hover {
+  background-color: #1ebc57;
+}
+
+/* Tombol X Close tanpa kotak
+.close-btn {
+  background-color: transparent;
+  color: #333;
+  border: none;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+  display: block;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #d32f2f;
+  font-weight: bold;
+} */
 
 /* table {
   width: 80%;

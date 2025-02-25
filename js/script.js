@@ -33,3 +33,13 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
     alert("Gagal login. Coba lagi.");
   }
 });
+
+// Fungsi untuk menampilkan popup
+function showRegisterPopup() {
+  document.getElementById("registerPopup").style.display = "block";
+}
+
+// Fungsi untuk menutup popup
+function closeRegisterPopup() {
+  document.getElementById("registerPopup").style.display = "none";
+}
