@@ -155,6 +155,10 @@ table#tiketTable td {
   border-bottom: 1px solid #ddd;
 }
 
+table#tiketTable tbody tr:nth-child(odd) {
+  background-color: #ecded4;
+}
+
 table#tiketTable tbody tr:nth-child(even) {
   background: #f2f2f2;
 }
@@ -181,6 +185,10 @@ table#tiketTable tbody tr:hover {
 #adminTiketTable th {
   background-color: #007bff;
   color: white;
+}
+
+#adminTiketTable tbody tr:nth-child(odd) {
+  background-color: #ecded4;
 }
 
 #adminTiketTable tr:nth-child(even) {
