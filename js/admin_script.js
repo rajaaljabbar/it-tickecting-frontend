@@ -9,7 +9,7 @@ if (!emailUser || roleUser !== "Admin") {
 } else {
   document.getElementById(
     "dashboardHeader"
-  ).innerText = `Dashboard Admin - ${namaUser}`;
+  ).innerText = `Halo Admin - (${namaUser})`;
 }
 
 // Mendapatkan semua tiket
@@ -78,6 +78,25 @@ const updateStatus = async (id, status) => {
     console.error("Gagal memperbarui status tiket:", error);
   }
 };
+
+function deleteTicket(id) {
+  if (confirm("Apakah Anda yakin ingin menghapus tiket ini?")) {
+    fetch(`http://localhost:7000/api/tickets/${id}`, {
+      method: "DELETE",
+    })
+      .then((response) => {
+        if (response.ok) {
+          alert("Tiket berhasil dihapus.");
+          location.reload(); // Refresh halaman setelah hapus
+        } else {
+          alert("Gagal menghapus tiket.");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }
+}
 
 // Panggil saat halaman dimuat
 window.addEventListener("load", loadAllTickets);
