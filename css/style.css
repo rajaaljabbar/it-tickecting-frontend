@@ -1,0 +1,232 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #a0e3ff, #76c5e8);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container untuk Form dan Tabel */
+.container-dashboard {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.login-container {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.login-container button {
+  width: 100%;
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-container button:hover {
+  background: #0056b3;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Style Dashboard */
+
+h2#dashboardHeader {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* Style Tombol Logout */
+button#logoutBtn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+  margin-top: -50px;
+}
+
+button#logoutBtn:hover {
+  background: #0056b3;
+}
+
+/* Style Form Pengajuan Tiket */
+form#ticketForm {
+  background: #f4f9ff;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+form#ticketForm input[type="text"],
+form#ticketForm input[type="email"],
+form#ticketForm select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+form#ticketForm button[type="submit"] {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form#ticketForm button[type="submit"]:hover {
+  background: #0056b3;
+}
+
+/* Style Tabel Daftar Tiket */
+table#tiketTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+table#tiketTable thead {
+  background: #007bff;
+  color: white;
+}
+
+table#tiketTable th,
+table#tiketTable td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table#tiketTable tbody tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+table#tiketTable tbody tr:hover {
+  background: #e0e0e0;
+}
+
+/* Styling untuk tabel di admin_dashboard */
+#adminTiketTable {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#adminTiketTable th,
+#adminTiketTable td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+#adminTiketTable th {
+  background-color: #007bff;
+  color: white;
+}
+
+#adminTiketTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#adminTiketTable tr:hover {
+  background-color: #ddd;
+}
+
+#adminTiketTable td select {
+  padding: 5px;
+}
+
+#adminTiketTable td button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#adminTiketTable td button:hover {
+  background-color: #0056b3;
+}
+
+/* table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background: #007bff;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background: #f2f2f2;
+} */

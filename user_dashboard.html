@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard User - IT Ticketing</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container-dashboard">
+      <h2 id="dashboardHeader">Hi User</h2>
+      <button id="logoutBtn">Logout</button>
+
+      <h3>Form Pengajuan Tiket</h3>
+      <form id="ticketForm">
+        <input type="text" id="nama" placeholder="Nama" readonly />
+        <input type="email" id="email" placeholder="Email" readonly />
+        <select id="dept">
+          <option value="">-- Pilih Dept. --</option>
+        </select>
+        <input type="text" id="no_hp" placeholder="No HP" />
+        <input type="text" id="deskripsi" placeholder="Deskripsi Masalah" />
+        <select id="prioritas">
+          <option value="">-- Pilih Prioritas --</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+        <button type="submit">Ajukan Tiket</button>
+      </form>
+
+      <h3>Daftar Tiket Saya</h3>
+      <table id="tiketTable">
+        <thead>
+          <tr>
+            <th>Nama</th>
+            <th>Dept.</th>
+            <th>Deskripsi</th>
+            <th>Prioritas</th>
+            <th>Status</th>
+            <th>Tanggal</th>
+          </tr>
+        </thead>
+        <tbody id="ticketList"></tbody>
+      </table>
+
+      <script src="js/user_script.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Admin - IT Ticketing</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container-dashboard">
+      <h2 id="dashboardHeader">Dashboard Admin</h2>
+      <button id="logoutBtn">Logout</button>
+
+      <h3>Daftar Semua Tiket</h3>
+      <table id="adminTiketTable">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Dept.</th>
+            <th>Deskripsi</th>
+            <th>Prioritas</th>
+            <th>Status</th>
+            <th>Tanggal</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="adminTicketList"></tbody>
+      </table>
+
+      <script src="js/admin_script.js"></script>
+    </div>
+  </body>
+</html>
