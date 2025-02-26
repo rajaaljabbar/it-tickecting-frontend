@@ -11,7 +11,7 @@ body {
 
 /* Container untuk Form dan Tabel */
 .container-dashboard {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   text-align: center;
 }
@@ -144,7 +144,7 @@ table#tiketTable {
 }
 
 table#tiketTable thead {
-  background: #007bff;
+  background: #d18b58;
   color: white;
 }
 
@@ -169,7 +169,7 @@ table#tiketTable tbody tr:hover {
 
 /* Styling untuk tabel di admin_dashboard */
 #adminTiketTable {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   border-collapse: collapse;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -183,7 +183,7 @@ table#tiketTable tbody tr:hover {
 }
 
 #adminTiketTable th {
-  background-color: #007bff;
+  background-color: #d18b58;
   color: white;
 }
 
@@ -340,6 +340,24 @@ table#tiketTable tbody tr:hover {
 
 .wa-btn:hover {
   background-color: #1ebc57;
+}
+
+#filter-tanggal,
+#filter-dept {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.kolom-deskripsi {
+  width: 500px; /* Atur lebar kolom Deskripsi */
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.kolom-tanggal {
+  width: 200px; /* Atur lebar kolom Tanggal */
+  text-align: center;
 }
 
 /* Tombol X Close tanpa kotak

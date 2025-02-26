@@ -42,7 +42,7 @@ const loadAllTickets = async () => {
             }>Resolved</option>
           </select>
         </td>
-        <td>${new Date(ticket.tanggal).toLocaleString()}</td>
+        <td>${new Date(ticket.tanggal).toISOString().split("T")[0]}</td>
         <td><button onclick="deleteTicket(${ticket.id})">Hapus</button></td>
       `;
       ticketList.appendChild(row);
@@ -96,6 +96,52 @@ function deleteTicket(id) {
         console.error("Error:", error);
       });
   }
+}
+
+function filterTickets() {
+  // Ambil nilai filter
+  const filterTanggal = document.getElementById("filter-tanggal").value;
+  const filterDept = document.getElementById("filter-dept").value.toLowerCase();
+  const filterPriority = document
+    .getElementById("filter-priority")
+    .value.toLowerCase();
+
+  // Ambil semua baris tabel
+  const tableRows = document.querySelectorAll("#adminTiketTable tbody tr");
+
+  tableRows.forEach((row) => {
+    // Ambil data dari kolom Dept., Tanggal, dan Priority
+    const dept = row
+      .querySelector("td:nth-child(3)")
+      .textContent.toLowerCase()
+      .trim();
+    const priority = row
+      .querySelector("td:nth-child(5)")
+      .textContent.toLowerCase()
+      .trim();
+    const tanggal = row.querySelector("td:nth-child(7)").textContent.trim();
+
+    // Ubah format tanggal dari tabel ke YYYY-MM-DD
+    const tanggalFormatted = tanggal
+      .split(",")[0]
+      .split("/")
+      .reverse()
+      .join("-");
+
+    // Cek kecocokan filter
+    const isDeptMatch = filterDept ? dept === filterDept : true;
+    const isPriorityMatch = filterPriority ? priority === filterPriority : true;
+    const isTanggalMatch = filterTanggal
+      ? tanggalFormatted === filterTanggal
+      : true;
+
+    // Tampilkan atau sembunyikan baris
+    if (isDeptMatch && isPriorityMatch && isTanggalMatch) {
+      row.style.display = "";
+    } else {
+      row.style.display = "none";
+    }
+  });
 }
 
 // Panggil saat halaman dimuat

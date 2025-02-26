@@ -12,16 +12,39 @@
       <button id="logoutBtn">Logout</button>
 
       <h3>Daftar Semua Tiket</h3>
+      <!-- Filter By Priority -->
+      <label for="filter-priority">Priority :</label>
+      <select id="filter-priority" onchange="filterTickets()">
+        <option value="">All</option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+
+      <!-- Filter By Tanggal -->
+      <label for="filter-tanggal">Filter By :</label>
+      <input type="date" id="filter-tanggal" onchange="filterTickets()" />
+
+      <!-- Filter By Dept. -->
+      <label for="filter-dept">Filter By :</label>
+      <select id="filter-dept" onchange="filterTickets()">
+        <option value="">Semua Dept.</option>
+        <option value="IT">IT</option>
+        <option value="Finance">Finance</option>
+        <option value="HR">HR</option>
+        <!-- Tambahkan opsi lain sesuai kebutuhan -->
+      </select>
+
       <table id="adminTiketTable">
         <thead>
           <tr>
             <th>No</th>
             <th>Nama</th>
             <th>Dept.</th>
-            <th>Deskripsi</th>
+            <th class="kolom-deskripsi">Deskripsi</th>
             <th>Prioritas</th>
             <th>Status</th>
-            <th>Tanggal</th>
+            <th class="kolom-tanggal">Tanggal</th>
             <th>Aksi</th>
           </tr>
         </thead>
