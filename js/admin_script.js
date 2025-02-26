@@ -43,7 +43,7 @@ const loadAllTickets = async () => {
           </select>
         </td>
         <td>${new Date(ticket.tanggal).toISOString().split("T")[0]}</td>
-        <td><button onclick="deleteTicket(${ticket.id})">Hapus</button></td>
+        <td><button onclick="deleteTicket(${ticket.id})">Delete</button></td>
       `;
       ticketList.appendChild(row);
     });

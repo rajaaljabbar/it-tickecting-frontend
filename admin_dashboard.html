@@ -11,7 +11,7 @@
       <h2 id="dashboardHeader">Dashboard Admin</h2>
       <button id="logoutBtn">Logout</button>
 
-      <h3>Daftar Semua Tiket</h3>
+      <h3>Ticket List</h3>
       <!-- Filter By Priority -->
       <label for="filter-priority">Priority :</label>
       <select id="filter-priority" onchange="filterTickets()">
@@ -38,14 +38,14 @@
       <table id="adminTiketTable">
         <thead>
           <tr>
-            <th>No</th>
-            <th>Nama</th>
+            <th>No.</th>
+            <th class="kolom-nama">Name</th>
             <th>Dept.</th>
-            <th class="kolom-deskripsi">Deskripsi</th>
-            <th>Prioritas</th>
+            <th class="kolom-deskripsi">Description</th>
+            <th>Priority</th>
             <th>Status</th>
-            <th class="kolom-tanggal">Tanggal</th>
-            <th>Aksi</th>
+            <th class="kolom-tanggal">Date</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody id="adminTicketList"></tbody>

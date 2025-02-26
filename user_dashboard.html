@@ -11,35 +11,35 @@
       <h2 id="dashboardHeader">Hi User</h2>
       <button id="logoutBtn">Logout</button>
 
-      <h3>Form Pengajuan Tiket</h3>
+      <h3>Please Fill This Form To Create Ticket</h3>
       <form id="ticketForm">
         <input type="text" id="nama" placeholder="Nama" readonly />
         <input type="email" id="email" placeholder="Email" readonly />
         <select id="dept">
-          <option value="">-- Pilih Dept. --</option>
+          <option value="">-- Choose Department --</option>
         </select>
-        <input type="text" id="no_hp" placeholder="No HP" />
-        <input type="text" id="deskripsi" placeholder="Deskripsi Masalah" />
+        <input type="text" id="no_hp" placeholder="Your phone number" />
+        <textarea id="deskripsi" placeholder="Describe your issue"></textarea>
         <select id="prioritas">
-          <option value="">-- Pilih Prioritas --</option>
+          <option value="">-- Choose Priority --</option>
           <option value="Low">Low</option>
           <option value="Medium">Medium</option>
           <option value="High">High</option>
         </select>
-        <button type="submit">Ajukan Tiket</button>
+        <button type="submit">Create Ticket</button>
       </form>
 
-      <h3>Daftar Tiket Saya</h3>
+      <h3>Your Ticket List</h3>
       <table id="tiketTable">
         <thead>
           <tr>
-            <th>Nama</th>
+            <th>No.</th>
             <th>Dept.</th>
-            <th>Deskripsi</th>
-            <th>Prioritas</th>
+            <th>Description</th>
+            <th>Priority</th>
             <th>Status</th>
-            <th>Tanggal</th>
-            <th>Aksi</th>
+            <th>Date</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody id="ticketList"></tbody>

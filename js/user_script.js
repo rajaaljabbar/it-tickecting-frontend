@@ -18,7 +18,7 @@ const loadDepartments = async () => {
     const departments = await response.json();
 
     const deptDropdown = document.getElementById("dept");
-    deptDropdown.innerHTML = '<option value="">-- Pilih Dept. --</option>';
+    deptDropdown.innerHTML = '<option value="">-- Choose Dept. --</option>';
 
     departments.forEach((dept) => {
       const option = document.createElement("option");
@@ -104,7 +104,7 @@ const loadUserTickets = async () => {
                 <td>${new Date(ticket.tanggal).toLocaleString()}</td>
                         <td><button onclick="deleteTicket(${
                           ticket.id
-                        })">Hapus</button></td>
+                        })">Drop Ticket</button></td>
 
             `;
       ticketList.appendChild(row);

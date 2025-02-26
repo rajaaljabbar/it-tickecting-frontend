@@ -3,19 +3,21 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #c0825b, #ce926e);
+  /* background: linear-gradient(to bottom, #c0825b, #ce926e); */
+  background: #eaeaea;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/* Container untuk Form dan Tabel */
+/* Container-Dashboard */
 .container-dashboard {
-  max-width: 1000px;
+  max-width: 90%;
   margin: 0 auto;
   text-align: center;
 }
 
+/* Login-Container */
 .login-container {
   background: white;
   padding: 30px 25px;
@@ -57,7 +59,7 @@ body {
   background: #0056b3;
 }
 
-button {
+button#loginBtn {
   background-color: #007bff;
   color: white;
   border: none;
@@ -66,153 +68,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #0056b3;
-}
-
-/* Style Dashboard */
-
-h2#dashboardHeader {
-  color: #333;
-  margin-bottom: 20px;
-}
-
-h3 {
-  color: #444;
-  margin-bottom: 10px;
-}
-
-/* Style Tombol Logout */
-button#logoutBtn {
-  background: #007bff;
-  color: white;
-  border: none;
-  padding: 8px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  float: right;
-  margin-top: -50px;
-}
-
-button#logoutBtn:hover {
-  background: #0056b3;
-}
-
-/* Style Form Pengajuan Tiket */
-form#ticketForm {
-  background: #f4f9ff;
-  padding: 20px;
-  border-radius: 10px;
-  display: inline-block;
-  text-align: left;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 30px;
-}
-
-form#ticketForm input[type="text"],
-form#ticketForm input[type="email"],
-form#ticketForm select {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-form#ticketForm button[type="submit"] {
-  background: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-form#ticketForm button[type="submit"]:hover {
-  background: #0056b3;
-}
-
-/* Style Tabel Daftar Tiket */
-table#tiketTable {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-table#tiketTable thead {
-  background: #d18b58;
-  color: white;
-}
-
-table#tiketTable th,
-table#tiketTable td {
-  padding: 12px 15px;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-}
-
-table#tiketTable tbody tr:nth-child(odd) {
-  background-color: #ecded4;
-}
-
-table#tiketTable tbody tr:nth-child(even) {
-  background: #f2f2f2;
-}
-
-table#tiketTable tbody tr:hover {
-  background: #e0e0e0;
-}
-
-/* Styling untuk tabel di admin_dashboard */
-#adminTiketTable {
-  width: 90%;
-  margin: 0 auto;
-  border-collapse: collapse;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-#adminTiketTable th,
-#adminTiketTable td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: center;
-}
-
-#adminTiketTable th {
-  background-color: #d18b58;
-  color: white;
-}
-
-#adminTiketTable tbody tr:nth-child(odd) {
-  background-color: #ecded4;
-}
-
-#adminTiketTable tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-#adminTiketTable tr:hover {
-  background-color: #ddd;
-}
-
-#adminTiketTable td select {
-  padding: 5px;
-}
-
-#adminTiketTable td button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#adminTiketTable td button:hover {
+button#loginBtn:hover {
   background-color: #0056b3;
 }
 
@@ -342,6 +198,179 @@ table#tiketTable tbody tr:hover {
   background-color: #1ebc57;
 }
 
+/* Default Button */
+button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c82333;
+}
+
+/* Style Dashboard */
+h2#dashboardHeader {
+  color: black;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* Style Tombol Logout */
+button#logoutBtn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+  margin-top: -50px;
+}
+
+button#logoutBtn:hover {
+  background: #c82333;
+}
+
+/* Style Form Pengajuan Tiket */
+form#ticketForm {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+form#ticketForm input[type="text"],
+form#ticketForm input[type="email"],
+form#ticketForm select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+textarea#deskripsi {
+  resize: vertical;
+  min-height: 100px;
+  max-height: 300px;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+form#ticketForm button[type="submit"] {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form#ticketForm button[type="submit"]:hover {
+  background: #218838;
+}
+
+/* Styling untuk tabel di user_dashboard */
+table#tiketTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+table#tiketTable thead {
+  background: #cccccc;
+  color: black;
+}
+
+table#tiketTable th,
+table#tiketTable td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table#tiketTable tbody tr:nth-child(odd) {
+  background-color: #eeeeee;
+}
+
+table#tiketTable tbody tr:nth-child(even) {
+  background: #ffffff;
+}
+
+table#tiketTable tbody tr:nth-child(even):hover,
+table#tiketTable tbody tr:nth-child(odd):hover {
+  background: #ddd;
+}
+
+/* Styling untuk tabel di admin_dashboard */
+#adminTiketTable {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#adminTiketTable th,
+#adminTiketTable td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+#adminTiketTable th {
+  background-color: #cccccc;
+  color: black;
+}
+
+#adminTiketTable tbody tr:nth-child(odd) {
+  background-color: #eeeeee;
+}
+
+#adminTiketTable tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+#adminTiketTable tbody tr:nth-child(odd):hover,
+#adminTiketTable tbody tr:nth-child(even):hover {
+  background-color: #ddd;
+}
+
+#adminTiketTable td select {
+  padding: 5px;
+}
+
+#adminTiketTable td button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#adminTiketTable td button:hover {
+  background-color: #c82333;
+}
+
 #filter-tanggal,
 #filter-dept {
   margin: 10px;
@@ -360,43 +389,7 @@ table#tiketTable tbody tr:hover {
   text-align: center;
 }
 
-/* Tombol X Close tanpa kotak
-.close-btn {
-  background-color: transparent;
-  color: #333;
-  border: none;
-  font-size: 14px;
+.kolom-nama {
+  width: 400px; /* Atur lebar kolom Nama */
   text-align: center;
-  cursor: pointer;
-  margin-top: 10px;
-  display: block;
-  transition: color 0.3s;
 }
-
-.close-btn:hover {
-  color: #d32f2f;
-  font-weight: bold;
-} */
-
-/* table {
-  width: 80%;
-  margin: 20px auto;
-  border-collapse: collapse;
-}
-
-table,
-th,
-td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: left;
-}
-
-th {
-  background: #007bff;
-  color: white;
-}
-
-tr:nth-child(even) {
-  background: #f2f2f2;
-} */
