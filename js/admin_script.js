@@ -15,7 +15,7 @@ if (!emailUser || roleUser !== "Admin") {
 // Mendapatkan semua tiket
 const loadAllTickets = async () => {
   try {
-    const response = await fetch("http://localhost:7000/api/tickets/all");
+    const response = await fetch("http://172.17.20.5:7000/api/tickets/all");
     const tickets = await response.json();
 
     const ticketList = document.querySelector("#adminTicketList");
@@ -58,7 +58,7 @@ const loadAllTickets = async () => {
 const updateStatus = async (id, status) => {
   try {
     const response = await fetch(
-      `http://localhost:7000/api/tickets/${id}/status`,
+      `http://172.17.20.5:7000/api/tickets/${id}/status`,
       {
         method: "PUT",
         headers: {
@@ -81,7 +81,7 @@ const updateStatus = async (id, status) => {
 
 function deleteTicket(id) {
   if (confirm("Apakah Anda yakin ingin menghapus tiket ini?")) {
-    fetch(`http://localhost:7000/api/tickets/${id}`, {
+    fetch(`http://172.17.20.5:7000/api/tickets/${id}`, {
       method: "DELETE",
     })
       .then((response) => {

@@ -14,7 +14,7 @@ if (!emailUser) {
 // Mendapatkan daftar Dept.
 const loadDepartments = async () => {
   try {
-    const response = await fetch("http://localhost:7000/api/departments");
+    const response = await fetch("http://172.17.20.5:7000/api/departments");
     const departments = await response.json();
 
     const deptDropdown = document.getElementById("dept");
@@ -52,7 +52,7 @@ document.getElementById("ticketForm").addEventListener("submit", async (e) => {
   console.log("Data tiket yang akan diajukan:", data); // Tambahkan ini
 
   try {
-    const response = await fetch("http://localhost:7000/api/tickets", {
+    const response = await fetch("http://172.17.20.5:7000/api/tickets", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -86,7 +86,7 @@ const loadUserTickets = async () => {
 
   try {
     const response = await fetch(
-      `http://localhost:7000/api/tickets?email=${emailUser}`
+      `http://172.17.20.5:7000/api/tickets?email=${emailUser}`
     );
     const tickets = await response.json();
 
@@ -118,7 +118,7 @@ const loadUserTickets = async () => {
 
 function deleteTicket(id) {
   if (confirm("Apakah Anda yakin ingin menghapus tiket ini?")) {
-    fetch(`http://localhost:7000/api/tickets/${id}`, {
+    fetch(`http://172.17.20.5:7000/api/tickets/${id}`, {
       method: "DELETE",
     })
       .then((response) => {

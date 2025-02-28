@@ -393,3 +393,79 @@ table#tiketTable tbody tr:nth-child(odd):hover {
   width: 400px; /* Atur lebar kolom Nama */
   text-align: center;
 }
+
+/* Responsif untuk layar HP */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .container-dashboard {
+    width: 100%;
+    padding: 0;
+  }
+
+  #filter-tanggal,
+  #filter-dept {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  table#tiketTable,
+  #adminTiketTable {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
+
+  table#tiketTable thead,
+  #adminTiketTable thead {
+    display: none;
+  }
+
+  table#tiketTable tbody tr,
+  #adminTiketTable tbody tr {
+    display: block;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  table#tiketTable tbody tr td,
+  #adminTiketTable tbody tr td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+
+  table#tiketTable tbody tr td::before,
+  #adminTiketTable tbody tr td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #444;
+    flex-basis: 40%;
+  }
+
+  table#tiketTable tbody tr td:last-child,
+  #adminTiketTable tbody tr td:last-child {
+    border-bottom: none;
+  }
+
+  .login-container,
+  form#ticketForm {
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+  }
+
+  button#logoutBtn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .popup-content {
+    width: 90%;
+  }
+}
